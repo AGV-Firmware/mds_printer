@@ -8,8 +8,8 @@ def printer_test(ser,Data):
   ser.write(b'TEXT 250,75,\"2\",0,1,1,\"Line111111112141hfckahkjf\"\n')
   ser.write(b'TEXT 120,100,\"2\",0,1,1,\"Line12342353512141hfckahkjf\"\n')
   ser.write(b'TEXT 100,200,\"3\",0,1,1,\"Date :            Weight :       \"\n')
-  ser.write(b'TEXT 100,275,\"3\",0,1,1,\"Starting Time :        Device :       \"\n')
-  ser.write(b'TEXT 100,350,\"3\",0,1,1,\"Cycle Number:         \"\n')
+  ser.write(b'TEXT 100,275,\"3\",0,1,1,\"Starting Time :             Device :       \"\n')
+  ser.write(b'TEXT 100,350,\"3\",0,1,1,\"Cycle Number:          \"\n')
   j = 0
   while j < 9:
     #ser
