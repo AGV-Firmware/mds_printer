@@ -22,11 +22,11 @@ def printer_test(ser,Data):
   ser.write(b'CLS\n')
   ser.write(b'TEXT 100,30,\"4\",0,1,1,\"Cycle Information\"\n')
   ser.write(b'TEXT 250,75,\"2\",0,1,1,\"Lineowave Technologies"\n')
-  temp = "TEXT 65,120,\"3\",0,1,1,\"Device : " +Data[2]     + "  Total Time :  " + Data[10]    +"    KG\"\n"
+  temp = "TEXT 65,120,\"3\",0,1,1,\"Device : " +Data[2]     + "  Total Time :  " + Data[10]    +"   min\"\n"
   ser.write(temp.encode("utf-8"))
-  temp = "TEXT 65,170,\"3\",0,1,1,\"Weight  : " +Data[6]     + "  Start Holding :  " + Data[5]    +"\"\n"
+  temp = "TEXT 65,170,\"3\",0,1,1,\"Weight  : " +Data[6]+ "    KG"  + "  Start Holding :  " + Data[5]    +"\"\n"
   ser.write(temp.encode("utf-8"))
-  temp = "TEXT 65,220,\"3\",0,1,1,\"Cycle No : " +Data[3]     + "  Holding Time :  " + Data[5]    +"    KG\"\n"
+  temp = "TEXT 65,220,\"3\",0,1,1,\"Cycle No : " +Data[3]     + "  Holding Time :  " + Data[5]    +"    min\"\n"
   ser.write(temp.encode("utf-8"))
   temp = "TEXT 65,270,\"3\",0,1,1,\"Program No  : " +Data[1]     + "  Temp Max :  " + Data[8]    +"\"\n"
   ser.write(temp.encode("utf-8"))
