@@ -31,6 +31,8 @@ while i< 20:
     Test = ser1.readline()
     print(Test)
     print(type(Test))
+    ser1.flushInput()
+    ser1.flushOutput()
     string = Test.decode("utf-8")
     string1 = string.rstrip().lstrip()
     Data =  "TEXT 10,30,\"3\",0,1,1,\"" + string1 + "\"\n" 
