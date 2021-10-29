@@ -29,7 +29,7 @@ Test = 'Dummy'
 while i< 20:
   if ser1.in_waiting:
     Test = ser1.readline()
-    print(Test)0
+    print(Test)
     print(type(Test))
     string = String(Test
     Data =  "TEXT 10,30,\"3\",0,1,1,\"" + String + "\"\n" 
