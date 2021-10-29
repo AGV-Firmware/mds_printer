@@ -7,8 +7,8 @@ def printer_test(ser,Data):
   ser.write(b'TEXT 200,30,\"4\",0,1,1,\"Disinfected Waste\"\n')
   ser.write(b'TEXT 250,75,\"2\",0,1,1,\"Line111111112141hfckahkjf\n')
   ser.write(b'TEXT 120,100,\"2\",0,1,1,\"Line12342353512141hfckahkjf\n')
-  count = 0
-  while count < 10:
+  j = 0
+  while j < 10:
     #ser
     print(Data[j].encode("utf-8"))
     j += 1
