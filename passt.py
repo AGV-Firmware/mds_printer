@@ -14,7 +14,13 @@ def printer_test(ser,Data):
   #ser.write(b'TEXT 65,275,\"3\",0,1,1,\"Starting Time :             Device :       \"\n')
   temp = "TEXT 65,350,\"3\",0,1,1,\"Cycle Number:  " +Data[3]  + "\"\n"
   ser.write(temp.encode("utf-8"))
-  #ser.write(b'TEXT 200,200,\"3\",0,1,1,\"Date :            Weight :       \"\n')
+  ser.write(b'PRINT 1\n')
+  
+  ser.write(b'SIZE 100 mm, 50 mm\n')
+  ser.write(b'GAP 3 mm, 0 mm\n')
+  ser.write(b'DIRECTION 1\n');
+  ser.write(b'CLS\n')
+  ser.write(b'TEXT 100,30,\"4\",0,1,1,\"Microwave Disinfected Waste\"\n')
   
   j = 0
   while j < 9:
