@@ -31,7 +31,7 @@ while i< 20:
     Test = ser1.readline()
     print(Test)
     print(type(Test))
-    string = String(Test)
+    string = Test.decode("utf-8")
     Data =  "TEXT 10,30,\"3\",0,1,1,\"" + string + "\"\n" 
     printer_test(ser,Data)
     i+=1
