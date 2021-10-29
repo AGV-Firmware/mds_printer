@@ -9,10 +9,11 @@ def printer_test(ser,Data):
   ser.write(b'TEXT 120,100,\"2\",0,1,1,\"Line12342353512141hfckahkjf\"\n')
   temp = "TEXT 65,200,\"3\",0,1,1,\"Date : " +Data[0]     + "  Weight :  " + Data[6]    +"\"\n"
   ser.write(temp.encode("utf-8"))
-  
-  ser.write(b'TEXT 65,275,\"3\",0,1,1,\"Starting Time :             Device :       \"\n')
-  ser.write(b'TEXT 65,350,\"3\",0,1,1,\"Cycle Number:          \"\n')
-  
+  temp = "TEXT 65,275,\"3\",0,1,1,\"Starting Time  : " +Data[4]     + "  Device :  " + Data[2]    +"\"\n"
+  ser.write(temp.encode("utf-8"))
+  #ser.write(b'TEXT 65,275,\"3\",0,1,1,\"Starting Time :             Device :       \"\n')
+  temp = "TEXT 65,350,\"3\",0,1,1,\"Cycle Number:  " +Data[3]  + "\"\n"
+  ser.write(temp.encode("utf-8"))
   #ser.write(b'TEXT 200,200,\"3\",0,1,1,\"Date :            Weight :       \"\n')
   
   j = 0
