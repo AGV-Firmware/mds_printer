@@ -12,7 +12,7 @@ def printer_test(ser,Data):
   ser.write(b'TEXT 65,275,\"3\",0,1,1,\"Starting Time :             Device :       \"\n')
   ser.write(b'TEXT 65,350,\"3\",0,1,1,\"Cycle Number:          \"\n')
   
-  ser.write(b'TEXT 200,200,\"3\",0,1,1,\"Date :            Weight :       \"\n')
+  #ser.write(b'TEXT 200,200,\"3\",0,1,1,\"Date :            Weight :       \"\n')
   
   j = 0
   while j < 9:
