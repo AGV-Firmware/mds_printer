@@ -27,13 +27,13 @@ Test = 'Dummy'
 #ser1.open()
 
 while i< 1:
-  #if ser1.in_waiting:
-    #Test = ser1.readline()
-  print(Test)
-  print(type(Test))
-  Data =  "TEXT 10,30,\"3\",0,1,1,\"" + Test + "\"\n" 
-  printer_test(ser,Data)
-  i+=1
+  if ser1.in_waiting:
+    Test = ser1.readline()
+    print(Test)
+    print(type(Test))
+    Data =  "TEXT 10,30,\"3\",0,1,1,\"" + Test + "\"\n" 
+    printer_test(ser,Data)
+    i+=1
 #Data =  b'TEXT 10,30,\"3\",0,1,1,\"' + Test +'\"\n' 
 
 
