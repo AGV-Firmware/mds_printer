@@ -6,7 +6,9 @@ Created on 2018
 import ctypes
 
 '''tsclibrary = ctypes.WinDLL("c:\\64\\TSCLIB.dll");'''
-tsclibrary = ctypes.WinDLL("C:\\Users\\AGV\\Downloads\\TSC_Python_SDK_Example\\tsc_sample\\libs\\TSCLIB.dll");
+tsclibrary = ctypes.WinDLL("/home/pi/mds_printer/TSCLIB.dll");
+
+
 
 if __name__ == '__main__':
     pass
