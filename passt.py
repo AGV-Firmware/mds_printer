@@ -2,7 +2,7 @@ import serial
 def printer_test(ser,Data):
   ser.write(b'SIZE 100 mm, 50 mm\n')
   ser.write(b'GAP 3 mm, 0 mm\n')
-  ser.write('DIRECTION 1\n');
+  ser.write(b'DIRECTION 1\n');
   ser.write(b'CLS\n');
   ser.write(Data)
   ser.write(b'PRINT 1\n')
@@ -26,13 +26,14 @@ Test = 'Dummy'
 #ser.open()
 #ser1.open()
 
-while i< 50:
+while i< 1:
   #if ser1.in_waiting:
     #Test = ser1.readline()
   print(Test)
   print(type(Test))
   Data =  "TEXT 10,30,\"3\",0,1,1,\"" + Test + "\"\n" 
   printer_test(ser,Data)
+  i+=1
 #Data =  b'TEXT 10,30,\"3\",0,1,1,\"' + Test +'\"\n' 
 
 
