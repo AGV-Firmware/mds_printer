@@ -32,7 +32,7 @@ def printer_test(ser,Data):
   ser.write(temp.encode("utf-8"))
   temp = "TEXT 65,240,\"2\",0,1,1,\"Start : " +Data[4]     + "               Temp Min :" + Data[9]    +"    \"\n"
   ser.write(temp.encode("utf-8"))
-  ser.write(b'TEXT 100,270,\"4\",0,1,1,\"    Disinfection OK\"\n')
+  ser.write(b'TEXT 100,300,\"4\",0,1,1,\"    Disinfection OK\"\n')
   
   ser.write(b'PRINT 1\n')
   
