@@ -32,7 +32,8 @@ while i< 20:
     print(Test)
     print(type(Test))
     string = Test.decode("utf-8")
-    Data =  "TEXT 10,30,\"3\",0,1,1,\"" + string + "\"\n" 
+    string1 = string.rstrip().lstrip()
+    Data =  "TEXT 10,30,\"3\",0,1,1,\"" + string1 + "\"\n" 
     printer_test(ser,Data)
     i+=1
 #Data =  b'TEXT 10,30,\"3\",0,1,1,\"' + Test +'\"\n' 
