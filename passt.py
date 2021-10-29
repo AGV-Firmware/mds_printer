@@ -35,7 +35,7 @@ def printer_test(ser,Data):
   ser.write(b'TEXT 100,300,\"4\",0,1,1,\"    Disinfection OK\"\n')
   
   ser.write(b'PRINT 1\n')
-  
+  """
   j = 0
   while j < 9:
     #ser
@@ -44,7 +44,7 @@ def printer_test(ser,Data):
             
     #ser.write(j.encode("utf-8"))
   #ser.write(Data.encode("utf-8"))
-  #ser.write(b'PRINT 1\n')
+  #ser.write(b'PRINT 1\n')"""
 
 ser = serial.Serial('/dev/ttyUSB0')
 ser.baudrate = 9600
@@ -65,21 +65,21 @@ Test = 'Dummy'
 #ser.open()
 #ser1.open()
 
-while i< 20:
+while True:
   if ser1.in_waiting:
     Test = ser1.readline()
-    print(Test)
-    print(type(Test))
+    #print(Test)
+    #print(type(Test))
     ser1.flushInput()
     ser1.flushOutput()
     string = (Test.decode("utf-8")).rstrip().lstrip()
     #string1 = string
     Data = string.split("#")
-    print(Data)
+    #print(Data)
     
     #Data =  "TEXT 10,30,\"3\",0,1,1,\"" + string1 + "\"\n" 
     printer_test(ser,Data)
-    i+=1
+    #i+=1
 #Data =  b'TEXT 10,30,\"3\",0,1,1,\"' + Test +'\"\n' 
 
 
