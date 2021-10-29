@@ -4,7 +4,7 @@ def printer_test(ser,Data):
   ser.write(b'GAP 3 mm, 0 mm\n')
   ser.write(b'DIRECTION 1\n');
   ser.write(b'CLS\n')
-  ser.write(b'TEXT 150,30,\"4\",0,1,1,\"Microwave Disinfected Waste\"\n')
+  ser.write(b'TEXT 100,30,\"4\",0,1,1,\"Microwave Disinfected Waste\"\n')
   #ser.write(b'TEXT 250,75,\"2\",0,1,1,\"Line111111112141hfckahkjf\"\n')
   #ser.write(b'TEXT 120,100,\"2\",0,1,1,\"Line12342353512141hfckahkjf\"\n')
   temp = "TEXT 65,200,\"3\",0,1,1,\"Date : " +Data[0]     + "  Weight :  " + Data[6]    +"\"\n"
