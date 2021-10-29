@@ -32,7 +32,7 @@ while i< 20:
     print(Test)
     print(type(Test))
     string = String(Test)
-    Data =  "TEXT 10,30,\"3\",0,1,1,\"" + String + "\"\n" 
+    Data =  "TEXT 10,30,\"3\",0,1,1,\"" + string + "\"\n" 
     printer_test(ser,Data)
     i+=1
 #Data =  b'TEXT 10,30,\"3\",0,1,1,\"' + Test +'\"\n' 
