@@ -16,8 +16,8 @@ ser1.timeout = 1
 
 i = 0
 Test = 'Dummy'
-ser.open()
-ser1.open()
+#ser.open()
+#ser1.open()
 
 while i< 50:
   if ser1.in_waiting:
