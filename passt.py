@@ -26,11 +26,11 @@ def printer_test(ser,Data):
   ser.write(temp.encode("utf-8"))
   temp = "TEXT 65,150,\"2\",0,1,1,\"Weight  : " +Data[6]+ "  KG"  + "    Start Holding :  " + Data[5]    +"\"\n"
   ser.write(temp.encode("utf-8"))
-  temp = "TEXT 65,200,\"2\",0,1,1,\"Cycle No : " +Data[3]     + "       Holding Time :  " + Data[5]    +"   min\"\n"
+  temp = "TEXT 65,180,\"2\",0,1,1,\"Cycle No : " +Data[3]     + "       Holding Time :  " + Data[5]    +"   min\"\n"
   ser.write(temp.encode("utf-8"))
-  temp = "TEXT 65,250,\"2\",0,1,1,\"Program No  : " +Data[1]     + "   Temp Max :  " + Data[8]    +"\"\n"
+  temp = "TEXT 65,210,\"2\",0,1,1,\"Program No  : " +Data[1]     + "   Temp Max :  " + Data[8]    +"\"\n"
   ser.write(temp.encode("utf-8"))
-  temp = "TEXT 65,300,\"2\",0,1,1,\"Start : " +Data[4]     + "               Temp Min :" + Data[9]    +"    \"\n"
+  temp = "TEXT 65,240,\"2\",0,1,1,\"Start : " +Data[4]     + "               Temp Min :" + Data[9]    +"    \"\n"
   ser.write(temp.encode("utf-8"))  
   
   ser.write(b'PRINT 1\n')
