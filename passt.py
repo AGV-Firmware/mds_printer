@@ -3,7 +3,8 @@ def printer_test(ser,Data):
   ser.write(b'SIZE 100 mm, 50 mm\n')
   ser.write(b'GAP 3 mm, 0 mm\n')
   ser.write(b'DIRECTION 1\n');
-  ser.write(b'CLS\n');
+  ser.write(b'CLS\n')
+  ser.
   ser.write(Data.encode("utf-8"))
   ser.write(b'PRINT 1\n')
 
@@ -35,8 +36,8 @@ while i< 20:
     ser1.flushOutput()
     string = (Test.decode("utf-8")).rstrip().lstrip()
     #string1 = string
-    string2 = string.split("#")
-    print(string2)
+    Data = string.split("#")
+    print(Data)
     
     #Data =  "TEXT 10,30,\"3\",0,1,1,\"" + string1 + "\"\n" 
     #printer_test(ser,Data)
