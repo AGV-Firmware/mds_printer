@@ -24,13 +24,13 @@ def printer_test(ser,Data):
   ser.write(b'TEXT 250,75,\"2\",0,1,1,\"Lineowave Technologies"\n')
   temp = "TEXT 65,150,\"3\",0,1,1,\"Date : " +Data[0]     + "  Weight :  " + Data[6]    +"    KG\"\n"
   ser.write(temp.encode("utf-8"))
-  temp = "TEXT 65,250,\"3\",0,1,1,\"Starting Time  : " +Data[4]     + "  Device :  " + Data[2]    +"\"\n"
+  temp = "TEXT 65,200,\"3\",0,1,1,\"Starting Time  : " +Data[4]     + "  Device :  " + Data[2]    +"\"\n"
   ser.write(temp.encode("utf-8"))
-  temp = "TEXT 65,350,\"3\",0,1,1,\"Date : " +Data[0]     + "  Weight :  " + Data[6]    +"    KG\"\n"
+  temp = "TEXT 65,250,\"3\",0,1,1,\"Date : " +Data[0]     + "  Weight :  " + Data[6]    +"    KG\"\n"
   ser.write(temp.encode("utf-8"))
-  temp = "TEXT 65,450,\"3\",0,1,1,\"Starting Time  : " +Data[4]     + "  Device :  " + Data[2]    +"\"\n"
+  temp = "TEXT 65,300,\"3\",0,1,1,\"Starting Time  : " +Data[4]     + "  Device :  " + Data[2]    +"\"\n"
   ser.write(temp.encode("utf-8"))
-  temp = "TEXT 65,550,\"3\",0,1,1,\"Date : " +Data[0]     + "  Weight :  " + Data[6]    +"    KG\"\n"
+  temp = "TEXT 65,450,\"3\",0,1,1,\"Date : " +Data[0]     + "  Weight :  " + Data[6]    +"    KG\"\n"
   ser.write(temp.encode("utf-8"))
   
   ser.write(b'PRINT 1\n')
