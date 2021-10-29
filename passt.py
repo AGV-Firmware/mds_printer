@@ -33,10 +33,11 @@ while i< 20:
     print(type(Test))
     ser1.flushInput()
     ser1.flushOutput()
-    string = Test.decode("utf-8")
-    string1 = string.rstrip().lstrip()
-    string2 = string1.split("#")
+    string = (Test.decode("utf-8")).rstrip().lstrip()
+    #string1 = string
+    string2 = string.split("#")
     print(string2)
+    
     #Data =  "TEXT 10,30,\"3\",0,1,1,\"" + string1 + "\"\n" 
     #printer_test(ser,Data)
     i+=1
