@@ -20,7 +20,7 @@ def printer_test(ser,Data):
   ser.write(b'GAP 3 mm, 0 mm\n')
   ser.write(b'DIRECTION 1\n');
   ser.write(b'CLS\n')
-  ser.write(b'TEXT 100,30,\"4\",0,1,1,\"  Cycle Information\"\n')
+  ser.write(b'TEXT 100,30,\"4\",0,1,1,\"    Cycle Information\"\n')
   ser.write(b'TEXT 250,75,\"2\",0,1,1,\"Lineowave Technologies"\n')
   temp = "TEXT 65,120,\"2\",0,1,1,\"Device : " +Data[2]     + "            Total Time :  " + Data[10]    +"   min\"\n"
   ser.write(temp.encode("utf-8"))
@@ -30,7 +30,7 @@ def printer_test(ser,Data):
   ser.write(temp.encode("utf-8"))
   temp = "TEXT 65,270,\"2\",0,1,1,\"Program No  : " +Data[1]     + "   Temp Max :  " + Data[8]    +"\"\n"
   ser.write(temp.encode("utf-8"))
-  temp = "TEXT 65,320,\"2\",0,1,1,\"Start : " +Data[4]     + "            Temp Min :" + Data[9]    +"    \"\n"
+  temp = "TEXT 65,320,\"2\",0,1,1,\"Start : " +Data[4]     + "               Temp Min :" + Data[9]    +"    \"\n"
   ser.write(temp.encode("utf-8"))  
   
   ser.write(b'PRINT 1\n')
