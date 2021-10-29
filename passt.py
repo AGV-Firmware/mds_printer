@@ -6,12 +6,22 @@ ser.parity=serial.PARITY_NONE
 ser.bytesize = serial.EIGHTBITS
 ser.stopbits = serial.STOPBITS_ONE
 ser.timeout = 1
+
+ser1 = serial.Serial('/dev/ttyUSB1')
+ser1.baudrate = 9600
+ser1.parity=serial.PARITY_NONE
+ser1.bytesize = serial.EIGHTBITS
+ser1.stopbits = serial.STOPBITS_ONE
+ser1.timeout = 1
+
 i = 0
 Test = 'Dummy'
 ser.open()
+ser1.open()
+
 while i< 50:
-  if ser.in_waiting:
-    Test = ser.readline()
+  if ser1.in_waiting:
+    Test = ser1.readline()
     Data =  b'TEXT 10,30,\"3\",0,1,1,\"' + Test +'\"\n' 
     printer_test(ser,Data)
 #Data =  b'TEXT 10,30,\"3\",0,1,1,\"' + Test +'\"\n' 
