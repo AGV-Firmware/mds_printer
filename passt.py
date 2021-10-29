@@ -20,12 +20,12 @@ Test = 'Dummy'
 #ser1.open()
 
 while i< 50:
-  if ser1.in_waiting:
-    Test = ser1.readline()
-    print(Test)
-    print(type(Test))
-    Data =  b'TEXT 10,30,\"3\",0,1,1,\"' + bytes(Test, 'utf-8') +'\"\n' 
-    printer_test(ser,Data)
+  #if ser1.in_waiting:
+    #Test = ser1.readline()
+  print(Test)
+  print(type(Test))
+  Data =  "TEXT 10,30,\"3\",0,1,1,\"" + Test + "\"\n" 
+  printer_test(ser,Data)
 #Data =  b'TEXT 10,30,\"3\",0,1,1,\"' + Test +'\"\n' 
 
 
