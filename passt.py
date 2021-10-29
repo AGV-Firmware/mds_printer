@@ -5,8 +5,8 @@ def printer_test(ser,Data):
   ser.write(b'DIRECTION 1\n');
   ser.write(b'CLS\n')
   ser.write(b'TEXT 200,30,\"4\",0,1,1,\"Disinfected Waste\"\n')
-  ser.write(b'TEXT 250,75,\"2\",0,1,1,\"Line111111112141hfckahkjf\n')
-  ser.write(b'TEXT 120,100,\"2\",0,1,1,\"Line12342353512141hfckahkjf\n')
+  ser.write(b'TEXT 250,75,\"2\",0,1,1,\"Line111111112141hfckahkjf\"\n')
+  ser.write(b'TEXT 120,100,\"2\",0,1,1,\"Line12342353512141hfckahkjf\"\n')
   j = 0
   while j < 9:
     #ser
