@@ -4,9 +4,12 @@ def printer_test(ser,Data):
   ser.write(b'GAP 3 mm, 0 mm\n')
   ser.write(b'DIRECTION 1\n');
   ser.write(b'CLS\n')
-  ser.
-  ser.write(Data.encode("utf-8"))
-  ser.write(b'PRINT 1\n')
+  j = 0
+  for j in Data:
+    print(j.encode("utf-8"))
+    ser.write(j.encode("utf-8"))
+  #ser.write(Data.encode("utf-8"))
+  #ser.write(b'PRINT 1\n')
 
 ser = serial.Serial('/dev/ttyUSB0')
 ser.baudrate = 9600
@@ -40,7 +43,7 @@ while i< 20:
     print(Data)
     
     #Data =  "TEXT 10,30,\"3\",0,1,1,\"" + string1 + "\"\n" 
-    #printer_test(ser,Data)
+    printer_test(ser,Data)
     i+=1
 #Data =  b'TEXT 10,30,\"3\",0,1,1,\"' + Test +'\"\n' 
 
