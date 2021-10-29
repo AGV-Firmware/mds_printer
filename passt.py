@@ -31,7 +31,7 @@ while i< 20:
     Test = ser1.readline()
     print(Test)
     print(type(Test))
-    string = String(Test
+    string = String(Test)
     Data =  "TEXT 10,30,\"3\",0,1,1,\"" + String + "\"\n" 
     printer_test(ser,Data)
     i+=1
