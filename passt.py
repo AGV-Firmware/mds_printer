@@ -4,7 +4,7 @@ def printer_test(ser,Data):
   ser.write(b'GAP 3 mm, 0 mm\n')
   ser.write(b'DIRECTION 1\n');
   ser.write(b'CLS\n');
-  ser.write(Data)
+  ser.write(bytes(Data, 'utf-8'))
   ser.write(b'PRINT 1\n')
 
 ser = serial.Serial('/dev/ttyUSB0')
