@@ -4,7 +4,7 @@ def printer_test(ser,Data):
   ser.write(b'GAP 3 mm, 0 mm\n')
   ser.write(b'DIRECTION 1\n');
   ser.write(b'CLS\n')
-  ser.write(b'TEXT 100,30,\"4\",0,1,1,\"Microwave Disinfected Waste\"\n')
+  ser.write(b'TEXT 90,30,\"4\",0,1,1,\"Microwave Disinfected Waste\"\n')
   ser.write(b'TEXT 250,75,\"2\",0,1,1,\"Lineowave Technologies"\n')
   #ser.write(b'TEXT 120,100,\"2\",0,1,1,\"Line12342353512141hfckahkjf\"\n')
   temp = "TEXT 65,200,\"3\",0,1,1,\"Date : " +Data[0]     + "  Weight :  " + Data[6]    +"    KG\"\n"
@@ -31,7 +31,8 @@ def printer_test(ser,Data):
   temp = "TEXT 65,210,\"2\",0,1,1,\"Program No  : " +Data[1]     + "   Temp Max :  " + Data[8]    +"\"\n"
   ser.write(temp.encode("utf-8"))
   temp = "TEXT 65,240,\"2\",0,1,1,\"Start : " +Data[4]     + "               Temp Min :" + Data[9]    +"    \"\n"
-  ser.write(temp.encode("utf-8"))  
+  ser.write(temp.encode("utf-8"))
+  ser.write(b'TEXT 100,270,\"4\",0,1,1,\"    Disinfection OK\"\n')
   
   ser.write(b'PRINT 1\n')
   
