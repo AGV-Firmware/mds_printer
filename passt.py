@@ -22,7 +22,7 @@ Test = 'Dummy'
 while i< 50:
   if ser1.in_waiting:
     Test = ser1.readline()
-    Data =  b'TEXT 10,30,\"3\",0,1,1,\"' + Test +'\"\n' 
+    Data =  b'TEXT 10,30,\"3\",0,1,1,\"' + Test.encode('utf-8') +'\"\n' 
     printer_test(ser,Data)
 #Data =  b'TEXT 10,30,\"3\",0,1,1,\"' + Test +'\"\n' 
 
