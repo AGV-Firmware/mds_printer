@@ -4,12 +4,16 @@ def printer_test(ser,Data):
   ser.write(b'GAP 3 mm, 0 mm\n')
   ser.write(b'DIRECTION 1\n');
   ser.write(b'CLS\n')
+  ser.write(b'TEXT 200,30,\"4\",0,1,1,\"Disinfected Waste\"\n')
+  ser.write(b'TEXT 250,75,\"2\",0,1,1,\"Line111111112141hfckahkjf\n')
+  ser.write(b'TEXT 120,100,\"2\",0,1,1,\"Line111111112141hfckahkjf\n'
   j = 0
   for j in Data:
+    ser
     print(j.encode("utf-8"))
-    ser.write(j.encode("utf-8"))
+    #ser.write(j.encode("utf-8"))
   #ser.write(Data.encode("utf-8"))
-  #ser.write(b'PRINT 1\n')
+  ser.write(b'PRINT 1\n')
 
 ser = serial.Serial('/dev/ttyUSB0')
 ser.baudrate = 9600
