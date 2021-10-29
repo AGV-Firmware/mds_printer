@@ -7,8 +7,9 @@ def printer_test(ser,Data):
   ser.write(b'TEXT 200,30,\"4\",0,1,1,\"Disinfected Waste\"\n')
   ser.write(b'TEXT 250,75,\"2\",0,1,1,\"Line111111112141hfckahkjf\"\n')
   ser.write(b'TEXT 120,100,\"2\",0,1,1,\"Line12342353512141hfckahkjf\"\n')
-  temp = "TEXT 65,200,\"3\",0,1,1,\"Date :   " +Data[0]     + "Weight :       \"\n"
+  temp = "TEXT 65,200,\"3\",0,1,1,\"Date : " +Data[0]     + "  Weight :  " + Data[0]    +"\"\n"
   ser.write(temp.encode("utf-8"))
+  
   ser.write(b'TEXT 65,275,\"3\",0,1,1,\"Starting Time :             Device :       \"\n')
   ser.write(b'TEXT 65,350,\"3\",0,1,1,\"Cycle Number:          \"\n')
   
