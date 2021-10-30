@@ -70,7 +70,7 @@ while True:
     ser1.flushInput()
     ser1.flushOutput()
     Test = ser1.readline()
-    print(Test)
+    #print(Test)
     #print(type(Test))
     ser1.flushInput()
     ser1.flushOutput()
