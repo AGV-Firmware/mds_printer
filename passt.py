@@ -46,14 +46,14 @@ def printer_test(ser,Data):
   #ser.write(Data.encode("utf-8"))
   #ser.write(b'PRINT 1\n')"""
 
-ser = serial.Serial('/dev/ttyUSB0')
+ser = serial.Serial('/dev/ttyUSB_D1')
 ser.baudrate = 9600
 ser.parity=serial.PARITY_NONE
 ser.bytesize = serial.EIGHTBITS
 ser.stopbits = serial.STOPBITS_ONE
 ser.timeout = 1
 
-ser1 = serial.Serial('/dev/ttyUSB1')
+ser1 = serial.Serial('/dev/ttyUSB_D2')
 ser1.baudrate = 9600
 ser1.parity=serial.PARITY_NONE
 ser1.bytesize = serial.EIGHTBITS
