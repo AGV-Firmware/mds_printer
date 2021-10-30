@@ -21,18 +21,18 @@ def printer_test(ser,Data):
   ser.write(b'DIRECTION 1\n');
   ser.write(b'CLS\n')
   ser.write(b'TEXT 100,30,\"4\",0,1,1,\"    Cycle Information\"\n')
-  ser.write(b'TEXT 250,75,\"2\",0,1,1,\"Lineowave Technologies"\n')
-  temp = "TEXT 65,120,\"2\",0,1,1,\"Date : " +Data[0]     + "     Weight :  " + Data[5]    +"   KG\"\n"
+  ser.write(b'TEXT 200,95,\"3\",0,1,1,\"Lineowave Technologies"\n')
+  temp = "TEXT 65,130,\"2\",0,1,1,\"Date : " +Data[0]     + "      Weight :  " + Data[5]    +"   KG\"\n"
   ser.write(temp.encode("utf-8"))
-  temp = "TEXT 65,150,\"2\",0,1,1,\"Start Time  : " + Data[2] +    "   Hold Start Time :  " + Data[3]    +"\"\n"
+  temp = "TEXT 65,160,\"2\",0,1,1,\"Start Time  : " + Data[2] +    "   Hold Start Time :  " + Data[3]    +"\"\n"
   ser.write(temp.encode("utf-8"))
-  temp = "TEXT 65,180,\"2\",0,1,1,\"End Time   : " +Data[4]     + "    Total Time :  " + Data[10]    +"   min\"\n"
+  temp = "TEXT 65,190,\"2\",0,1,1,\"End Time   : " +Data[4]     + "    Total Time :  " + Data[10]    +"   min\"\n"
   ser.write(temp.encode("utf-8"))
-  temp = "TEXT 65,210,\"2\",0,1,1,\"Start Temp  : " +Data[7]     + "      Temp Max :  " + Data[8]    +"\"\n"
+  temp = "TEXT 65,220,\"2\",0,1,1,\"Start Temp  : " +Data[7]     + "       Temp Max :  " + Data[8]    +"\"\n"
   ser.write(temp.encode("utf-8"))
-  temp = "TEXT 65,240,\"2\",0,1,1,\"                      Prcocess No :" + Data[9]    +"\"\n"
+  temp = "TEXT 65,250,\"2\",0,1,1,\"                      Prcocess No : " + Data[9]    +"\"\n"
   ser.write(temp.encode("utf-8"))
-  ser.write(b'TEXT 100,300,\"4\",0,1,1,\"    Disinfected !\"\n')
+  ser.write(b'TEXT 100,310,\"4\",0,1,1,\"      Disinfected !\"\n')
   
   ser.write(b'PRINT 1\n')
   """
