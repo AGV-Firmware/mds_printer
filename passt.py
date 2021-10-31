@@ -6,12 +6,10 @@ def printer_test(ser,Data):
   ser.write(b'CLS\n')
   ser.write(b'TEXT 80,50,\"4\",0,1,1,\"Microwave Disinfected Waste\"\n')
   ser.write(b'TEXT 200,95,\"3\",0,1,1,\"Lineowave Technologies"\n')
-  #ser.write(b'TEXT 120,100,\"2\",0,1,1,\"Line12342353512141hfckahkjf\"\n')
   temp = "TEXT 55,170,\"3\",0,1,1,\"Date: " +Data[0]     + "    WT B/f Cycle:  " + Data[5]    +"  KG\"\n"
   ser.write(temp.encode("utf-8"))
   temp = "TEXT 55,220,\"3\",0,1,1,\"Start Time: " +Data[2]     + "   WT A/f Cycle:  " + Data[6]    +"  KG\"\n"
   ser.write(temp.encode("utf-8"))
-  #ser.write(b'TEXT 65,275,\"3\",0,1,1,\"Starting Time :             Device :       \"\n')
   temp = "TEXT 55,270,\"3\",0,1,1,\"Process No: " + Data[1]  + "   End Time : " + Data[4] + "\"\n"
   ser.write(temp.encode("utf-8"))
   ser.write(b'PRINT 1\n')
@@ -37,16 +35,7 @@ def printer_test(ser,Data):
   ser.write(b'PRINT 1\n')
   ser.write(b'CLS\n')
   ser.write(b'PRINT 1\n')
-  """
-  j = 0
-  while j < 9:
-    #ser
-    print(Data[j].encode("utf-8"))
-    j += 1
-            
-    #ser.write(j.encode("utf-8"))
-  #ser.write(Data.encode("utf-8"))
-  #ser.write(b'PRINT 1\n')"""
+  
 
 ser = serial.Serial('/dev/ttyUSB_D1')
 ser.baudrate = 9600
@@ -64,28 +53,20 @@ ser1.timeout = 1
 
 i = 0
 Test = 'Dummy'
-#ser.open()
-#ser1.open()
 
 while True:
   if ser1.in_waiting:
-    #ser1.flushInput()
-    #ser1.flushOutput()
     Test = ser1.readline()
-    print(Test)
+    #print(Test)
     #print(type(Test))
     ser1.flushInput()
     ser1.flushOutput()
     string = (Test.decode("utf-8")).rstrip().lstrip()
-    #string1 = string
     Data = string.split("#")
     #print(Data)
-    
-    #Data =  "TEXT 10,30,\"3\",0,1,1,\"" + string1 + "\"\n" 
     printer_test(ser,Data)
     
-    #i+=1
-#Data =  b'TEXT 10,30,\"3\",0,1,1,\"' + Test +'\"\n' 
+
 
 
 
