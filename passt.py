@@ -35,6 +35,8 @@ def printer_test(ser,Data):
   ser.write(b'TEXT 100,310,\"4\",0,1,1,\"      Disinfected !\"\n')
   
   ser.write(b'PRINT 1\n')
+  ser.write(b'CLS\n')
+  ser.write(b'PRINT 1\n')
   """
   j = 0
   while j < 9:
@@ -70,7 +72,7 @@ while True:
     ser1.flushInput()
     ser1.flushOutput()
     Test = ser1.readline()
-    #print(Test)
+    print(Test)
     #print(type(Test))
     ser1.flushInput()
     ser1.flushOutput()
