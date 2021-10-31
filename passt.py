@@ -69,8 +69,8 @@ Test = 'Dummy'
 
 while True:
   if ser1.in_waiting:
-    ser1.flushInput()
-    ser1.flushOutput()
+    #ser1.flushInput()
+    #ser1.flushOutput()
     Test = ser1.readline()
     print(Test)
     #print(type(Test))
