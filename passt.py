@@ -20,7 +20,7 @@ def printer_test(ser,Data):
   ser.write(b'CLS\n')
   ser.write(b'TEXT 100,50,\"4\",0,1,1,\"    Cycle Information\"\n')
   ser.write(b'TEXT 200,95,\"3\",0,1,1,\"Lineowave Technologies"\n')
-  temp = "TEXT 65,150,\"2\",0,1,1,\"Date : " +Data[0]     + "      Weight :  " + Data[5]    +"   KG\"\n"
+  temp = "TEXT 65,150,\"2\",0,1,1,\"Date : " +Data[0]     + "     Weight :  " + Data[5]    +"   KG\"\n"
   ser.write(temp.encode("utf-8"))
   temp = "TEXT 65,180,\"2\",0,1,1,\"Start Time  : " + Data[2] +    "   Hold Start Time :  " + Data[3]    +"\"\n"
   ser.write(temp.encode("utf-8"))
