@@ -33,8 +33,8 @@ def printer_test(ser,Data):
   ser.write(b'TEXT 100,310,\"4\",0,1,1,\"      Disinfected !\"\n')
   
   ser.write(b'PRINT 1\n')
-  ser.write(b'CLS\n')
-  ser.write(b'PRINT 1\n')
+  #ser.write(b'CLS\n')
+  #ser.write(b'PRINT 1\n')
   
 
 ser = serial.Serial('/dev/ttyUSB_D1')
